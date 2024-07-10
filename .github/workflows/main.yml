@@ -1,4 +1,4 @@
-name: Adding linter Check
+name: linter Check
 run-name: ${{ github.actor }} is trying to run linter
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 jobs:
   my_job:
-    name: deploy to staging
+    name: Running Linter
     runs-on: ubuntu-22.04
 
     steps:
