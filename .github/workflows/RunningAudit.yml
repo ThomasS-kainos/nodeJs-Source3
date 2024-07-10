@@ -1,4 +1,4 @@
-name: Adding linter Check
+name: Running audit
 run-name: ${{ github.actor }} Running audit
 on: 
   push: 

@@ -1,5 +1,5 @@
-name: linter Check
-run-name: ${{ github.actor }} is trying to run linter
+name: Building app
+run-name: ${{ github.actor }} is trying to build
 on:
   push:
     branches: [ "main" ]
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 jobs:
   my_job:
-    name: Running Linter
+    name: Running CI
     runs-on: ubuntu-22.04
 
     steps:
@@ -17,7 +17,5 @@ jobs:
         with:
           node-version: 20.x
 
-      - name: npm install, run linter
-        run: |
-          npm install
-          npm run linter
+      - name: npm ci
+        run: npm ci
