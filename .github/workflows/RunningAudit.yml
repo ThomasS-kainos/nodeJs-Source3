@@ -2,13 +2,11 @@ name: Adding linter Check
 run-name: ${{ github.actor }} Running audit
 on: 
   push: 
-    branches:
-      - main
-  pull: 
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request: 
+    branches: [ "main" ]
   schedule:
-    - cron: "*/0 */23 * * *"
+    - cron: "0 23 * * *"
 jobs:
   my_job:
     name: Checking Vunrabilites
